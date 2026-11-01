@@ -1,0 +1,72 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software (via the DOI below) and the accompanying paper (see preferred-citation)."
+title: "SPeCTRA: Stealthy PPO-enhanced Coordinated Trigger Attack against Robust Federated Aggregation"
+abstract: >-
+  Reference implementation of SPeCTRA, a PPO-driven backdoor attack on federated
+  learning. A reinforcement-learning agent adapts a frequency-domain phase trigger
+  in the YCbCr chrominance channels under Hermitian symmetry, evading eight
+  Byzantine-robust and backdoor-specific aggregation defenses across SVHN,
+  CIFAR-10, and Fashion-MNIST.
+type: software
+license: Apache-2.0
+repository-code: "https://github.com/shohelex/spectra-federated-backdoor"
+version: "1.0.0"            # TODO: set to the git tag you release (e.g. v1.0.0)
+date-released: "2026-11-01" # TODO: set to the actual release date
+keywords:
+  - federated learning
+  - backdoor attack
+  - reinforcement learning
+  - proximal policy optimization
+  - Byzantine-robust aggregation
+  - frequency-domain trigger
+
+# TODO before release: verify each given-names / family-names split below
+# (name order in Bangla/other names can be ambiguous), and add an `orcid:`
+# line to each author as "https://orcid.org/0000-0000-0000-0000".
+authors:
+  - given-names: "Shaikh Al"
+    family-names: "Harun"
+    affiliation: "Gopalganj Science and Technology University, Gopalganj, Bangladesh"
+  - given-names: "Md Shohel"
+    family-names: "Khan"
+    affiliation: "Bangladesh University of Engineering and Technology, Dhaka, Bangladesh"
+  - given-names: "Sifat"
+    family-names: "Shikdhar"
+    affiliation: "Gopalganj Science and Technology University, Gopalganj, Bangladesh"
+  - given-names: "Hirak"
+    family-names: "Mondal"
+    affiliation: "Khulna University, Khulna, Bangladesh"
+  - given-names: "Avi Deb"
+    family-names: "Raha"
+    affiliation: "Khulna University, Khulna, Bangladesh"
+  - given-names: "Anupam Kumar"
+    family-names: "Bairagi"
+    affiliation: "Khulna University, Khulna, Bangladesh"
+  - given-names: "Sujit"
+    family-names: "Biswas"
+    affiliation: "City University of London, London, United Kingdom"
+
+preferred-citation:
+  type: article
+  title: "SPeCTRA: Stealthy PPO-enhanced Coordinated Trigger Attack against Robust Federated Aggregation"
+  authors:
+    - given-names: "Shaikh Al"
+      family-names: "Harun"
+    - given-names: "Md Shohel"
+      family-names: "Khan"
+    - given-names: "Sifat"
+      family-names: "Shikdhar"
+    - given-names: "Hirak"
+      family-names: "Mondal"
+    - given-names: "Avi Deb"
+      family-names: "Raha"
+    - given-names: "Anupam Kumar"
+      family-names: "Bairagi"
+    - given-names: "Sujit"
+      family-names: "Biswas"
+  journal: "Computer Networks"
+  publisher:
+    name: "Elsevier"
+  year: 2026
+  # TODO: add the article DOI once the proof is assigned one:
+  # doi: "10.1016/j.comnet.XXXX.XXXXXX"
