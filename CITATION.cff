@@ -21,9 +21,8 @@ keywords:
   - Byzantine-robust aggregation
   - frequency-domain trigger
 
-# TODO before release: verify each given-names / family-names split below
-# (name order in Bangla/other names can be ambiguous), and add an `orcid:`
-# line to each author as "https://orcid.org/0000-0000-0000-0000".
+# Author names, order, and given/family splits match the manuscript author list.
+# Optional: add an `orcid:` line per author, e.g. "https://orcid.org/0000-0000-0000-0000".
 authors:
   - given-names: "Shaikh Al"
     family-names: "Harun"
