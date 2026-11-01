@@ -1,5 +1,7 @@
 # SPeCTRA: Stealthy PPO-enhanced Coordinated Trigger Attack against Robust Federated Aggregation
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23850774.svg)](https://doi.org/10.5281/zenodo.23850774)
+
 SPeCTRA is a PPO-driven backdoor attack on federated learning. A reinforcement-learning
 agent adapts a frequency-domain phase trigger in the YCbCr chrominance channels under
 Hermitian symmetry, keeping perturbations imperceptible while evading eight Byzantine-robust
@@ -110,6 +112,10 @@ If you use this code, please cite:
 > S. A. Harun, M. S. Khan, S. Shikdhar, H. Mondal, A. D. Raha, A. K. Bairagi, and S. Biswas,
 > "SPeCTRA: Stealthy PPO-enhanced Coordinated Trigger Attack against Robust Federated
 > Aggregation," *Computer Networks*, Elsevier, 2026 (in press).
+
+The archived source code is citable via Zenodo (all versions):
+
+> SPeCTRA: Stealthy PPO-enhanced Coordinated Trigger Attack against Robust Federated Aggregation. Zenodo. https://doi.org/10.5281/zenodo.23850774
 
 ## License
 

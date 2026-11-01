@@ -10,8 +10,9 @@ abstract: >-
 type: software
 license: Apache-2.0
 repository-code: "https://github.com/shohelex/spectra-federated-backdoor"
-version: "1.0.0"            # TODO: set to the git tag you release (e.g. v1.0.0)
-date-released: "2026-11-01" # TODO: set to the actual release date
+doi: "10.5281/zenodo.23850774"
+version: "1.0.0"
+date-released: "2026-11-01"
 keywords:
   - federated learning
   - backdoor attack
