@@ -1,0 +1,10 @@
+experiment: e10_optimizer
+base:
+  num-server-rounds: 80
+  dataset: cifar10
+  defense: fedavg
+  attack: spectra
+  beta: 0.3
+  seed: 1
+grid:
+  theta_optimizer: [ppo, random, grid, fixed]

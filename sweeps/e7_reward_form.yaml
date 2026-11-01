@@ -1,0 +1,10 @@
+experiment: e7_reward_form
+base:
+  num-server-rounds: 80
+  dataset: cifar10
+  defense: fedavg
+  attack: spectra
+  beta: 0.3
+grid:
+  reward_asr_form: [quad, clip, log]
+  seed: [1, 2, 3]

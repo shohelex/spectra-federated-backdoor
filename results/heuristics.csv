@@ -1,0 +1,4 @@
+Configuration,Net_ASR,Strict_ASR,Clean_acc
+Heuristics enabled,0.2734 +/- 0.0676,0.3901,0.8333
+Heuristics removed,0.2658 +/- 0.0516,0.3560,0.8348
+Signals in state,0.2758 +/- 0.0296,0.3997,0.8306

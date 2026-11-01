@@ -1,0 +1,17 @@
+experiment: e3_coordination
+base:
+  num-server-rounds: 150
+  defense: fedavg
+  attack: spectra
+  beta: 0.3
+grid:
+  dataset: [svhn, cifar10]
+  coordination: [coordinated, independent]
+  seed: [1, 2, 3]
+include:
+  - {dataset: svhn,    coordination: decoupled, seed: 1, pretrained_policy: policies/svhn.pt}
+  - {dataset: svhn,    coordination: decoupled, seed: 2, pretrained_policy: policies/svhn.pt}
+  - {dataset: svhn,    coordination: decoupled, seed: 3, pretrained_policy: policies/svhn.pt}
+  - {dataset: cifar10, coordination: decoupled, seed: 1, pretrained_policy: policies/cifar10.pt}
+  - {dataset: cifar10, coordination: decoupled, seed: 2, pretrained_policy: policies/cifar10.pt}
+  - {dataset: cifar10, coordination: decoupled, seed: 3, pretrained_policy: policies/cifar10.pt}

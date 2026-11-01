@@ -1,0 +1,3 @@
+Coordination,Net_ASR,Clean_acc,PSNR_dB
+Synchronized (shared policy),0.9031 +/- 0.0024,0.9470,28.13
+Decoupled (independent),0.9347 +/- 0.0092,0.9489,31.26

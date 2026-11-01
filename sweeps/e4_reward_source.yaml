@@ -1,0 +1,11 @@
+experiment: e4_reward_source
+base:
+  num-server-rounds: 80
+  dataset: cifar10
+  defense: fedavg
+  attack: spectra
+  beta: 0.3
+  seed: 1
+grid:
+  dirichlet_alpha: [0.1, 1.0, 5.0]
+  reward_eval_source: [local, proxy]

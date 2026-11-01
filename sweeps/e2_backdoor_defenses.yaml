@@ -1,0 +1,9 @@
+experiment: e2_backdoor_defenses
+base:
+  num-server-rounds: 150
+  attack: spectra
+  beta: 0.3
+grid:
+  dataset: [svhn, cifar10]
+  defense: [flame, fltrust]
+  seed: [1, 2, 3]

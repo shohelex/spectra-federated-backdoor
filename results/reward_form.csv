@@ -1,0 +1,4 @@
+ASR_term,Net_ASR,sigma,Clean_acc
+Quadratic,0.2612,0.0592,0.8317
+Clipped,0.2853,0.0098,0.8304
+Logarithmic (default),0.2884,0.0053,0.8341

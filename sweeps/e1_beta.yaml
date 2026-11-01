@@ -1,0 +1,11 @@
+experiment: e1_beta
+base:
+  num-server-rounds: 150
+  attack: spectra
+  theta_optimizer: ppo
+  coordination: coordinated
+grid:
+  dataset: [svhn, cifar10]
+  defense: [fedavg, krum, fedmedian]
+  beta: [0.05, 0.1, 0.2, 0.3]
+  seed: [1, 2, 3]

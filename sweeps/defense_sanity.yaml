@@ -1,0 +1,9 @@
+experiment: defense_sanity
+base:
+  num-server-rounds: 40
+  dataset: svhn
+  attack: none
+  beta: 0.0
+  seed: 1
+grid:
+  defense: [fedavg, krum, fedmedian, bulyan, auror, deepsight, flame, fltrust]

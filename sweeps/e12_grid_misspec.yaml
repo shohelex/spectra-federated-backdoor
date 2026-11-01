@@ -1,0 +1,12 @@
+experiment: e12_grid_misspec
+base:
+  num-server-rounds: 80
+  dataset: cifar10
+  defense: fedavg
+  attack: spectra
+  beta: 0.3
+  coordination: coordinated
+  theta_bounds_misspec: 0.5
+grid:
+  theta_optimizer: [ppo, grid]
+  seed: [1, 2, 3]

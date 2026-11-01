@@ -1,0 +1,9 @@
+experiment: e9_attack_baselines
+base:
+  num-server-rounds: 150
+  beta: 0.3
+grid:
+  attack: [dba, fiba]
+  dataset: [svhn, cifar10]
+  defense: [fedavg, krum]
+  seed: [1, 2, 3]
