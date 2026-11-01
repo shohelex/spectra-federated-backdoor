@@ -259,62 +259,6 @@ def fig_stealth(runs: List[Run]) -> None:
     ax.set_ylim(-0.05, 1)
     finish(ax, 'PSNR (dB)  —  higher is stealthier', 'Net ASR')
     save(fig, 'svhn_stealth_vs_asr')
-LEGACY_ROOTS = {'fashion_mnist': REPO / 'noaggr fashionmnist' / 'noaggr', 'svhn_legacy': REPO / 'noaggr  svhn' / 'noaggr'}
-LEGACY_FILES = {'30.csv': 'FedAvg', '30fedmedian.csv': 'Coordinate median', '30krum.csv': 'Krum', '10.csv': 'FedAvg ($\\beta$=0.1)'}
-
-def load_legacy(root: Path) -> Dict[str, List[dict]]:
-    out = {}
-    for fname, label in LEGACY_FILES.items():
-        p = root / fname
-        if not p.exists():
-            continue
-        try:
-            out[label] = list(csv.DictReader(open(p, newline='', encoding='utf-8')))
-        except Exception:
-            continue
-    return out
-
-def _legacy_series(rows: List[dict], key: str) -> np.ndarray:
-    v = []
-    for r in rows:
-        try:
-            v.append(float(r.get(key, 'nan')))
-        except (TypeError, ValueError):
-            v.append(np.nan)
-    return np.asarray(v, dtype=float)
-
-def fig_legacy(runs: List[Run]) -> None:
-    for name, root in LEGACY_ROOTS.items():
-        data = load_legacy(root)
-        if not data:
-            continue
-        pretty = PRETTY.get(name.replace('_legacy', ''), name)
-        for key, ylab, suffix, note in (('clean_acc_global', 'Clean accuracy', 'clean_acc', None), ('avg_asr', 'ASR (raw, client-side)', 'asr', 'legacy: no baseline subtraction'), ('avg_psnr', 'PSNR (dB)', 'psnr', None)):
-            fig, ax = plt.subplots()
-            drew = 0
-            for i, label in enumerate((l for l in LEGACY_FILES.values() if l in data)):
-                y = _legacy_series(data[label], key)
-                if not np.isfinite(y).any():
-                    continue
-                x = np.arange(1, len(y) + 1)
-                c = PALETTE[i % len(PALETTE)]
-                ax.plot(x, y, color=c, linewidth=0.5, alpha=0.22)
-                w = min(5, max(1, len(y) // 10))
-                if w > 1:
-                    kern = np.ones(w) / w
-                    pad = np.pad(y, (w - 1, 0), mode='edge')
-                    y = np.convolve(pad, kern, mode='valid')
-                draw(ax, x, y, None, label, i)
-                drew += 1
-            if not drew:
-                plt.close(fig)
-                continue
-            if key != 'avg_psnr':
-                ax.set_ylim(0, 1.02)
-            finish(ax, 'Communication round', ylab)
-            if note:
-                fig.text(0.5, -0.06, note + ' · single seed · 5-round rolling mean', ha='center', va='top', fontsize=5.5, style='italic', color='0.35')
-            save(fig, f'legacy_{name}_{suffix}')
 BAR_HATCH = ['', '///']
 
 def _tail_mean(r: Run, key: str, window: int=10) -> float:
@@ -390,7 +334,7 @@ def fig_heuristics(runs: List[Run]) -> None:
     ax.grid(True, axis='y')
     ax.grid(False, axis='x')
     save(fig, 'cifar10_heuristics_ablation')
-FIGURES = {'accuracy': fig_accuracy, 'asr': fig_asr, 'beta': fig_beta, 'attacks': fig_attacks, 'stealth': fig_stealth, 'krum': fig_krum, 'heuristics': fig_heuristics, 'legacy': fig_legacy}
+FIGURES = {'accuracy': fig_accuracy, 'asr': fig_asr, 'beta': fig_beta, 'attacks': fig_attacks, 'stealth': fig_stealth, 'krum': fig_krum, 'heuristics': fig_heuristics}
 
 def inventory(runs: List[Run]) -> None:
     by_ds = defaultdict(lambda: defaultdict(set))
@@ -408,12 +352,7 @@ def inventory(runs: List[Run]) -> None:
     missing = [d for d in ('svhn', 'cifar10', 'fashion_mnist') if d not in by_ds]
     if missing:
         print('  NOT AVAILABLE from this pipeline: ' + ', '.join((PRETTY.get(m, m) for m in missing)))
-        print('  The three-panel accuracy figure in the manuscript spans SVHN, CIFAR-10 and')
-        print('  Fashion-MNIST. Panels for datasets listed above cannot be regenerated from')
-        print('  runs/ -- they exist only in the legacy forks ("noaggr fashionmnist/",')
-        print('  noaggr/), whose CSVs use the older schema and a different clean-accuracy')
-        print('  measurement. Either re-run those datasets or state in the caption which')
-        print('  panels come from which measurement.\n')
+        print('  Run the corresponding experiments first (see sweeps/ and README.md).\n')
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
