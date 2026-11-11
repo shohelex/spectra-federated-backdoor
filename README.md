@@ -118,6 +118,31 @@ The archived source code is citable via Zenodo (all versions):
 
 > SPeCTRA: Stealthy PPO-enhanced Coordinated Trigger Attack against Robust Federated Aggregation. Zenodo. https://doi.org/10.5281/zenodo.23850774
 
+### BibTeX
+
+```bibtex
+@article{harun2027spectra,
+  title     = {{SPeCTRA}: Stealthy {PPO}-enhanced Coordinated Trigger Attack against Robust Federated Aggregation},
+  author    = {Harun, Shaikh Al and Khan, Md Shohel and Shikdhar, Sifat and Mondal, Hirak and Raha, Avi Deb and Bairagi, Anupam Kumar and Biswas, Sujit},
+  journal   = {Computer Networks},
+  volume    = {292},
+  pages     = {112907},
+  year      = {2027},
+  doi       = {10.1016/j.comnet.2026.112907},
+  publisher = {Elsevier}
+}
+
+@software{harun2026spectra_code,
+  title     = {{SPeCTRA}: Stealthy {PPO}-enhanced Coordinated Trigger Attack against Robust Federated Aggregation},
+  author    = {Harun, Shaikh Al and Khan, Md Shohel and Shikdhar, Sifat and Mondal, Hirak and Raha, Avi Deb and Bairagi, Anupam Kumar and Biswas, Sujit},
+  year      = {2026},
+  version   = {1.0.0},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23850774},
+  url       = {https://doi.org/10.5281/zenodo.23850774}
+}
+```
+
 ## License
 
 Released under the Apache License 2.0; see [LICENSE](LICENSE).
