@@ -111,7 +111,8 @@ If you use this code, please cite:
 
 > S. A. Harun, M. S. Khan, S. Shikdhar, H. Mondal, A. D. Raha, A. K. Bairagi, and S. Biswas,
 > "SPeCTRA: Stealthy PPO-enhanced Coordinated Trigger Attack against Robust Federated
-> Aggregation," *Computer Networks*, Elsevier, 2026 (in press).
+> Aggregation," *Computer Networks*, vol. 292, p. 112907, 2027.
+> doi:[10.1016/j.comnet.2026.112907](https://doi.org/10.1016/j.comnet.2026.112907)
 
 The archived source code is citable via Zenodo (all versions):
 
